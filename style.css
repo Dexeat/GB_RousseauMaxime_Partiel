@@ -1,0 +1,79 @@
+#code{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 3px;
+}
+
+.devine{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 5px;
+}
+
+#valid{
+	display: flex;
+	flex-direction: row;
+	margin-top: 2px;
+	margin-left: 5px;
+}
+
+.cases{
+	height: 30px;
+	width: 30px;
+	border: solid 1px black;
+}
+
+.valid{
+	height: 25px;
+	width: 25px;
+	border: solid 1px black;
+}
+
+input{
+	height: 28px;
+	width: 30px;
+	border: solid 1px black;
+}
+
+
+/** COLOR **/
+
+.rouge{
+	background-color: #FF2D00;
+}
+
+.bleu{
+	background-color: #00F0FF;
+}
+
+.vert{
+	background-color: #00FF27;
+}
+
+.jaune{
+	background-color: #F3FF00;
+}
+
+.violet{
+	background-color: #F700FF;
+}
+
+.orange{
+	background-color: #FF9700;
+}
+
+.gris{
+	background-color: #DFDEE0;
+}
+
+.rose{
+	background-color: #F2AFE6;
+}
+
+.noir{
+	background-color: #000000;
+}
+
+.blanc{
+	background-color: #ffffff;
+}
