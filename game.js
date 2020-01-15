@@ -61,10 +61,8 @@ $('button').on('click', function() {
 		if ($(('.valid'+'.valid'+i)+("."+Ligne)).hasClass('noir')) {
 			victoire++;
 		}
-		if (victoire == 5) {$('button'+('.'+Ligne)).html("Vous avez gagnez !")}
-		else{
-			$('button'+('.'+Ligne)).html("Vous en avez trouvé : "+(victoire))
-
+		if (victoire == 5) {
+			$('button'+('.'+Ligne)).html("Vous avez gagnez !")
 			//couleur code
 
 			for (var i = 0; i <= 7; i++) {
@@ -78,6 +76,8 @@ $('button').on('click', function() {
 				if ($('.cases'+i).html() == 8) {$('.cases'+i).addClass('rose')}
 			}
 		}
+		else{
+			$('button'+('.'+Ligne)).html("Vous en avez trouvé : "+(victoire))}
 
 	} 
 })
