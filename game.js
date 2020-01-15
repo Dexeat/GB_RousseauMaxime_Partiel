@@ -10,7 +10,7 @@ function getRandomIntInclusive(min, max) {
   return Math.floor(Math.random() * (max - min +1)) + min;
 }
 
-//GeneCode
+//Génération aléatoire du code
 for (var i = 0; i <= 7; i++) {
 	codeA = getRandomIntInclusive(1,8);
 	//console.log(codeA);
@@ -21,6 +21,7 @@ for (var i = 0; i <= 7; i++) {
 $('input').on('input', function() {
 	//console.log($(this).val())
 
+	//change les couleur tout en permetant de les selectionner plus tard
 	if ($(this).val() == 1) {$(this).removeClass('rouge bleu vert jaune violet orange gris rose').addClass('rouge');}
 	if ($(this).val() == 2) {$(this).removeClass('rouge bleu vert jaune violet orange gris rose').addClass('bleu')}
 	if ($(this).val() == 3) {$(this).removeClass('rouge bleu vert jaune violet orange gris rose').addClass('vert')}
@@ -35,6 +36,7 @@ $('input').on('input', function() {
 //Bouton de validation
 $('button').on('click', function() {
 
+	//Permet de géré chaque ligne indépendament en récuperant sont id unique
 	Ligne = $(this).attr('class');
 
 	for(var i=1; i <=5; i++){
@@ -42,8 +44,7 @@ $('button').on('click', function() {
 		//console.log($('input'+('.test'+i)+("."+Ligne)).val())
 		//console.log($('.cases'+i).html())
 
-		//if($('input'+('.test'+i)+("."+Ligne)).val() == $('.cases'+i).html()){$(('.valid'+'.valid'+i)+("."+Ligne)).addClass('noir');}
-
+		//vérifie si le numéro d'identification est identique et change l'indiquateur après
 		for(var j=1; j <= 5; j++){
 			if ($('input'+('.test'+i)+("."+Ligne)).val() == $('.cases'+j).html()) {$(('.valid'+'.valid'+i)+("."+Ligne)).removeClass('blanc noir rouge').addClass('blanc');}
 		}
@@ -63,7 +64,8 @@ $('button').on('click', function() {
 		}
 		if (victoire == 5) {
 			$('button'+('.'+Ligne)).html("Vous avez gagnez !")
-			//couleur code
+			
+			//couleur code secret !
 
 			for (var i = 0; i <= 7; i++) {
 				if ($('.cases'+i).html() == 1) {$('.cases'+i).addClass('rouge')}
