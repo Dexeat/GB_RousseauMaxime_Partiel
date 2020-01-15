@@ -17,20 +17,6 @@ for (var i = 0; i <= 7; i++) {
 	$('.cases'+i).html(codeA);
 }
 
-//couleur code
-
-for (var i = 0; i <= 7; i++) {
-	if ($('.cases'+i).html() == 1) {$('.cases'+i).addClass('rouge')}
-	if ($('.cases'+i).html() == 2) {$('.cases'+i).addClass('bleu')}
-	if ($('.cases'+i).html() == 3) {$('.cases'+i).addClass('vert')}
-	if ($('.cases'+i).html() == 4) {$('.cases'+i).addClass('jaune')}
-	if ($('.cases'+i).html() == 5) {$('.cases'+i).addClass('violet')}
-	if ($('.cases'+i).html() == 6) {$('.cases'+i).addClass('orange')}
-	if ($('.cases'+i).html() == 7) {$('.cases'+i).addClass('gris')}
-	if ($('.cases'+i).html() == 8) {$('.cases'+i).addClass('rose')}
-}
-
-
 //detection des input
 $('input').on('input', function() {
 	//console.log($(this).val())
@@ -76,7 +62,22 @@ $('button').on('click', function() {
 			victoire++;
 		}
 		if (victoire == 5) {$('button'+('.'+Ligne)).html("Vous avez gagnez !")}
-		else{$('button'+('.'+Ligne)).html("Vous en avez trouvé : "+(victoire))}
+		else{
+			$('button'+('.'+Ligne)).html("Vous en avez trouvé : "+(victoire))
+
+			//couleur code
+
+			for (var i = 0; i <= 7; i++) {
+				if ($('.cases'+i).html() == 1) {$('.cases'+i).addClass('rouge')}
+				if ($('.cases'+i).html() == 2) {$('.cases'+i).addClass('bleu')}
+				if ($('.cases'+i).html() == 3) {$('.cases'+i).addClass('vert')}
+				if ($('.cases'+i).html() == 4) {$('.cases'+i).addClass('jaune')}
+				if ($('.cases'+i).html() == 5) {$('.cases'+i).addClass('violet')}
+				if ($('.cases'+i).html() == 6) {$('.cases'+i).addClass('orange')}
+				if ($('.cases'+i).html() == 7) {$('.cases'+i).addClass('gris')}
+				if ($('.cases'+i).html() == 8) {$('.cases'+i).addClass('rose')}
+			}
+		}
 
 	} 
 })
